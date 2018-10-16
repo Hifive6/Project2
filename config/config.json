@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "MS@Dc02830786",
+    "database": "eventPlanner_db",
     "host": "localhost",
     "dialect": "mysql"
   },
