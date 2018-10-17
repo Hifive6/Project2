@@ -15,8 +15,8 @@ module.exports = function(app) {
     db.Events.findOne({
       where: {
         id: req.params.id
-      },
-      include: [db.Post]
+      }
+    //   include: [db.Post]
     }).then(function(dbEvents) {
       res.json(dbEvents);
     });
