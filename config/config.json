@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "root",
-=======
-    "password": "MS@Dc02830786",
->>>>>>> 83233cc8dc3eee6b87d2cb91a77a53c3ef71d659
     "database": "eventPlanner_db",
     "host": "localhost",
     "port": 8889,
@@ -16,11 +12,6 @@
     "password": "root",
     "database": "eventPlanner_db",
     "host": "localhost",
-<<<<<<< HEAD
-    "port": 8889,
-=======
-    "port": 3306,
->>>>>>> 83233cc8dc3eee6b87d2cb91a77a53c3ef71d659
     "dialect": "mysql",
     "logging": false
   },
