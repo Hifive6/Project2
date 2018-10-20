@@ -58,3 +58,7 @@ $.get("api/events/" + idSearch + "/" + pinSearch, function(data){
     console.log(data);
 })
 }
+
+function sendToBrowser() {
+
+}
