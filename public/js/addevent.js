@@ -1,4 +1,3 @@
-// var moment = require('moment');
 
 $("#addbtn").on("click", function(event) {
 event.preventDefault();

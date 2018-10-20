@@ -7,33 +7,18 @@ $("#search-btn").on("click", function(event) {
 
 function validateId() {
 $.get("api/events/" + idSearch, function(data){
-   var time = moment(data.time, "hmm").format("HH:mm");
+//    var time = moment(data.time, "hmm").format("HH:mm");
     if(!data){
         alert("go home, you are drunk")
-    }else{
-        display = `${data["name"]}`
-        display += "<ul>";
-    
-        display += "<li>" + "Name: "+ data.name + "<br>";
-        display += "Location: "+ data.location + "<br>";
-        display += "Time: "+ time + "</li>";
-    // `
-    // Name:         ${data["name"]}
-    // Location:     ${data["location"]}
-    // Time:         ${data["time"]}
-    // `
-    
-     
-        display += "</ul>";
-    
-        $("#stuff").prepend(display);
-        
-        //addInfo();
+    }else{    
+        validatePin()
     }
     // console.log(data);
     
 })
 }
+
+
 
 // function addInfo(data){
 //     var display = '<h1>Name: ' + data.name + '</h1>';
@@ -48,8 +33,28 @@ $.get("api/events/" + idSearch, function(data){
 //     validatePin() 
 // })
 
-// function validatePin() {
-// $.get("api/events/" + idSearch + "/" + pinSearch, function(data){
-//     console.log(data);
-// })
-// }
+function validatePin() {
+$.get("api/events/" + idSearch + "/" + pinSearch, function(data){
+    if(!data){
+        alert("not valid pin")
+    }else{
+        display = `${data["name"]}`
+        display += "<ul>";
+    
+        display += "<li>" + "Name: "+ data.name + "<br>";
+        display += "Location: "+ data.location + "<br>";
+        display += "Time: "+ data.time + "</li>";
+    // `
+    // Name:         ${data["name"]}
+    // Location:     ${data["location"]}
+    // Time:         ${data["time"]}
+    // `
+    
+     
+        display += "</ul>";
+    
+        $("#stuff").prepend(display);
+    }
+    console.log(data);
+})
+}
