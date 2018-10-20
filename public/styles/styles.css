@@ -93,7 +93,7 @@
 #t3:target #p1,
 #t4:target #p1,
 #t5:target #p1{
-  background: black;
+  background: rgb(30, 216, 13);
 }
 
 #t2:target #p1 .icon, 
@@ -489,9 +489,19 @@ html, body {
 
 /* end of search box*/
 
-/*begin invalid search modal*/
 
 
 
 
-/*end of invalid search modal*/
+
+
+/*begin  modal*/
+
+
+
+
+/*end  modal*/
+
+
+
+
