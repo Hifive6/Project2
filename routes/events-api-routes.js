@@ -41,6 +41,8 @@ module.exports = function(app) {
     });
   });
 
+  
+
   // Delete an event by id
   // app.delete("/api/authors/:id", function(req, res) {
   //   db.Events.destroy({

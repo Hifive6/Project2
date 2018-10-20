@@ -46,6 +46,8 @@
 <body>
 
 
+           
+
           <div class="page" id="p2">
             <section class="icon"><span class=""></span>
            </section>
@@ -55,22 +57,22 @@
     <h1 class="icon formHeader">Create an Event!</h1>
     </div>
     <div class="question">
-      <input type="text" required/>
+      <input type="text" id = "name" required/>
       <label>Event Name</label>
     </div>
     <div class="question">
-      <input type="text" required/>
+      <input type="text" id = "location" required/>
       <label>Location</label>
     </div>
     <div class="question">
-      <input type="text" required/>
+      <input type="text" id = "time" required/>
       <label>Time</label>
     </div>
     <div class="question">
-      <input type="text" required/>
+      <input type="text" id = "pin" required/>
       <label>6-Digit Pin</label>
     </div>
-    <button>Submit</button>
+    <button id = "addbtn" >Submit</button>
   </form>
 
 
@@ -79,7 +81,7 @@
           </div>  
           <div class="page" id="p3">
              
-            
+          <div id = "stuff"></div>
             <section class="icon fa fa-search"><span class="title"></span></section>
               
            <!--modal-->
@@ -92,8 +94,10 @@
                 <h3></h3>
                 <div>
 
-                  <input type="text" placeholder="        Search . . ." required>
+                  <input type="text" id = "search-input" placeholder="        Search . . ." required>
+                  
                 </div>
+                <button type="submit" id = "search-btn">Click me</button>
               </div>
             </div>
         </div>
@@ -109,5 +113,7 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="./js/addevent.js" type="text/javascript"></script>
 <script src="./js/searchevent.js" type="text/javascript"></script>
+<script src="moment.js"></script>
+
 
 </html>
