@@ -1,3 +1,5 @@
+// var moment = require('moment');
+
 $("#addbtn").on("click", function(event) {
 event.preventDefault();
 
@@ -9,6 +11,7 @@ event.preventDefault();
         location: $("#location").val().trim(),
         // age from age input
         time: $("#time").val().trim(),
+        //time: moment($("#time").val().trim(), "hmm").format("HH:mm"),
         // points from force-points input
         pin: $("#pin").val().trim()
     };

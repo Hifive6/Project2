@@ -3,21 +3,32 @@ $("#search-btn").on("click", function(event) {
     idSearch = $("#search-input").val().trim();
     // console.log(idSearch);
     validateId() 
-    
 })
 
 function validateId() {
 $.get("api/events/" + idSearch, function(data){
+   var time = moment(data.time, "hmm").format("HH:mm");
     if(!data){
         alert("go home, you are drunk")
     }else{
-        display = `${
-            "Name:"         [data.name],
-            "Location:"     [data.location],
-            "Time:"         [data.time],
-    }`
-        $(".button_box2").append(display);
-        // addInfo();
+        display = `${data["name"]}`
+        display += "<ul>";
+    
+        display += "<li>" + "Name: "+ data.name + "<br>";
+        display += "Location: "+ data.location + "<br>";
+        display += "Time: "+ time + "</li>";
+    // `
+    // Name:         ${data["name"]}
+    // Location:     ${data["location"]}
+    // Time:         ${data["time"]}
+    // `
+    
+     
+        display += "</ul>";
+    
+        $("#stuff").prepend(display);
+        
+        //addInfo();
     }
     // console.log(data);
     
