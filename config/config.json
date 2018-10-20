@@ -5,14 +5,14 @@
     "database": "eventPlanner_db",
     "port": 3307,
     "host": "localhost",
+    "port": 8889,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "root",
+    "database": "eventPlanner_db",
     "host": "localhost",
-    "port": 3306,
     "dialect": "mysql",
     "logging": false
   },
