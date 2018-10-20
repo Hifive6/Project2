@@ -14,7 +14,6 @@ $.get("api/events/" + idSearch, function(data){
     console.log(data.name);
     var display = '<h1>Name: ' + data.name + '</h1>';
     var newBtn = '<button>Search Pin</button>';
-    newBtn.attr("width", 
 
     $('.button_box2').append(display);
     console.log("worked");
