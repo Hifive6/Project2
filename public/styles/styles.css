@@ -93,7 +93,7 @@
 #t3:target #p1,
 #t4:target #p1,
 #t5:target #p1{
-  background: black;
+  background: rgb(30, 216, 13);
 }
 
 #t2:target #p1 .icon, 
@@ -274,7 +274,7 @@ html {
   background-color: rgb(14, 2, 2);;
 }
 
-form {
+.form1 {
   position: relative;
   display: inline-block;
   max-width: 700px;
@@ -291,7 +291,7 @@ form {
   transform: translate(-50%, 0);
  
 }
-form h1 {
+.form1 h1 {
   color: rgb(0, 0, 0);
   font-weight: 100;
   letter-spacing: 0.01em;
@@ -300,7 +300,7 @@ form h1 {
   text-transform: uppercase;
   text-align: center;
 }
-form button {
+.form1 button {
   margin-top: 35px;
   background-color: white;
   border: 1px solid rgb(0, 0, 0);;
@@ -316,21 +316,21 @@ form button {
   position: relative;
   z-index: 1;
 }
-form button:hover, form button:focus {
+.form1 button:hover, .form1 button:focus {
   color: white;
   background-color: rgb(0, 0, 0);;
 }
-form .question {
+.form1 .question {
   position: relative;
   padding: 10px 0;
 }
-form .question:first-of-type {
+.form1 .question:first-of-type {
   padding-top: 0;
 }
-form .question:last-of-type {
+.form1 .question:last-of-type {
   padding-bottom: 0;
 }
-form .question label {
+.form1 .question label {
   transform-origin: left center;
   color: rgb(0, 0, 0);;
   font-weight: 100;
@@ -344,7 +344,7 @@ form .question label {
   z-index: 2;
   pointer-events: none;
 }
-form .question input[type="text"] {
+.form1 .question input[type="text"] {
   appearance: none;
   background-color: none;
   border: 1px solid rgb(0, 0, 0);;
@@ -361,22 +361,22 @@ form .question input[type="text"] {
   position: relative;
   z-index: 1;
 }
-form .question input[type="text"]:focus {
+.form1 .question input[type="text"]:focus {
   outline: none;
   background: rgb(0, 0, 0);;
   color: white;
   margin-top: 30px;
 }
-form .question input[type="text"]:valid {
+.form1 .question input[type="text"]:valid {
   margin-top: 30px;
 }
-form .question input[type="text"]:focus ~ label {
+.form1 .question input[type="text"]:focus ~ label {
   -moz-transform: translate(0, -35px);
   -ms-transform: translate(0, -35px);
   -webkit-transform: translate(0, -35px);
   transform: translate(0, -35px);
 }
-form .question input[type="text"]:valid ~ label {
+.form1 .question input[type="text"]:valid ~ label {
   text-transform: uppercase;
   font-style: italic;
   -moz-transform: translate(5px, -35px) scale(0.6);
@@ -489,9 +489,19 @@ html, body {
 
 /* end of search box*/
 
-/*begin invalid search modal*/
 
 
 
 
-/*end of invalid search modal*/
+
+
+/*begin  modal*/
+
+
+
+
+/*end  modal*/
+
+
+
+
