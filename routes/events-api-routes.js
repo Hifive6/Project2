@@ -15,8 +15,7 @@ module.exports = function(app) {
     db.Events.findOne({
       where: {
         id: req.params.id
-      },
-      // include: [db.Post]
+      }
     }).then(function(dbEvents) {
       res.json(dbEvents);
     });
@@ -41,6 +40,8 @@ module.exports = function(app) {
       res.json(dbEvents);
     });
   });
+
+  
 
   // Delete an event by id
   // app.delete("/api/authors/:id", function(req, res) {

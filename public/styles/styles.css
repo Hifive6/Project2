@@ -7,6 +7,7 @@
   height: 100%;
   margin: 0;
   padding: 0;
+
   transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
   -webkit-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
   -moz-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
@@ -36,9 +37,45 @@
 
 
 /* background images*/
-#p1 { background-color: blue; }
-#p2 { background-color: slategray;}
-#p3 { background-color: green;}
+#p1 {
+   background-image: url();
+   background-position: center;
+   background-repeat: no-repeat;
+   
+  
+ }
+#p2 { 
+  /*
+  background-image: url(../Photos/partypic.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+*/
+
+
+  background-image: url(../Photos/partypic.jpg); 
+ 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  
+   
+
+}
+
+
+#p3 {  background-image: url(../Photos/partypic2.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
 /* background images*/
 
 #t2:target #p2,
@@ -56,7 +93,7 @@
 #t3:target #p1,
 #t4:target #p1,
 #t5:target #p1{
-  background: black;
+  background: rgb(30, 216, 13);
 }
 
 #t2:target #p1 .icon, 
@@ -67,8 +104,8 @@
 }
 
 .icon {
-  color: #fff;
-  font-size: 28px;
+  color: rgb(255, 255, 255);
+  font-size: 38px;
   display: block;
   margin-bottom: 80%;
   
@@ -155,7 +192,7 @@ a {
 }
 
 .hint a:hover {
-  color: #FFF;
+  color: rgb(0, 0, 0);
 }
 
 .line-trough {
@@ -164,15 +201,16 @@ a {
 
 .page .icon {
   position: absolute;
-  top: 10%;
-  bottom: 80%;
-  right: 50%;
-  left: 20%;
+  display: inline;
+  top: 0%;
+  bottom: 120%;
+  right: 40%;
+  left: 24%;
   width: 270px;
   height: 170px;
   margin: auto;
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
   line-height: 1.3;
   transform: translateX(360%);
   -webkit-transform: translateX(360%);
@@ -185,7 +223,7 @@ a {
 }
 
 .page#p1 .icon {
-  height: 220px;
+  
 }
 
 .page#p1 .icon {
@@ -206,6 +244,19 @@ a {
 
 /* form for creating event*/
 
+
+.formHeader{
+
+  color: rgb(187, 183, 183);
+}
+
+
+.formHeaderDiv {
+  background-image: url(../Photos/partypic2.jpg);
+
+
+}
+
 .transition, form button, form .question label, form .question input[type="text"] {
   -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
   -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
@@ -223,7 +274,7 @@ html {
   background-color: rgb(14, 2, 2);;
 }
 
-form {
+.form1 {
   position: relative;
   display: inline-block;
   max-width: 700px;
@@ -240,7 +291,7 @@ form {
   transform: translate(-50%, 0);
  
 }
-form h1 {
+.form1 h1 {
   color: rgb(0, 0, 0);
   font-weight: 100;
   letter-spacing: 0.01em;
@@ -249,7 +300,7 @@ form h1 {
   text-transform: uppercase;
   text-align: center;
 }
-form button {
+.form1 button {
   margin-top: 35px;
   background-color: white;
   border: 1px solid rgb(0, 0, 0);;
@@ -265,21 +316,21 @@ form button {
   position: relative;
   z-index: 1;
 }
-form button:hover, form button:focus {
+.form1 button:hover, .form1 button:focus {
   color: white;
   background-color: rgb(0, 0, 0);;
 }
-form .question {
+.form1 .question {
   position: relative;
   padding: 10px 0;
 }
-form .question:first-of-type {
+.form1 .question:first-of-type {
   padding-top: 0;
 }
-form .question:last-of-type {
+.form1 .question:last-of-type {
   padding-bottom: 0;
 }
-form .question label {
+.form1 .question label {
   transform-origin: left center;
   color: rgb(0, 0, 0);;
   font-weight: 100;
@@ -293,7 +344,7 @@ form .question label {
   z-index: 2;
   pointer-events: none;
 }
-form .question input[type="text"] {
+.form1 .question input[type="text"] {
   appearance: none;
   background-color: none;
   border: 1px solid rgb(0, 0, 0);;
@@ -310,22 +361,22 @@ form .question input[type="text"] {
   position: relative;
   z-index: 1;
 }
-form .question input[type="text"]:focus {
+.form1 .question input[type="text"]:focus {
   outline: none;
   background: rgb(0, 0, 0);;
   color: white;
   margin-top: 30px;
 }
-form .question input[type="text"]:valid {
+.form1 .question input[type="text"]:valid {
   margin-top: 30px;
 }
-form .question input[type="text"]:focus ~ label {
+.form1 .question input[type="text"]:focus ~ label {
   -moz-transform: translate(0, -35px);
   -ms-transform: translate(0, -35px);
   -webkit-transform: translate(0, -35px);
   transform: translate(0, -35px);
 }
-form .question input[type="text"]:valid ~ label {
+.form1 .question input[type="text"]:valid ~ label {
   text-transform: uppercase;
   font-style: italic;
   -moz-transform: translate(5px, -35px) scale(0.6);
@@ -339,115 +390,118 @@ form .question input[type="text"]:valid ~ label {
 
 /* search box */
 
-.button_box2 {
-margin: 500px auto;
-display: flex;
-justify-content: center;
-margin-right: 35%;
-margin-left: 25%;
 
-}
-/*-------------------------------------*/
-.cf:before, .cf:after{
-content:"";
-display:table;
-}
-.cf:after{
-clear:both;
-}
-.cf{
-zoom:1;
-}
-/*-------------------------------------*/
 
-.form-wrapper-2 {
-width: 330px;
-padding: 15px;
-background: #555;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-border-radius: 10px;
--moz-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
--webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+* {
+  font-family: Roboto, sans-serif;
+  padding: 0;
+  margin: 0;
 }
-.form-wrapper-2 input {
-width: 210px;
-height: 20px;
-padding: 10px 5px;
-float: left;
-font: bold 15px 'Raleway', sans-serif;
-border: 0;
-background: #eee;
--moz-border-radius: 3px 0 0 3px;
--webkit-border-radius: 3px 0 0 3px;
-border-radius: 3px 0 0 3px;
+
+html, body {
+  width: 100%;
+  height: 100%;
 }
-.form-wrapper-2 input:focus {
-outline: 0;
-background: #fff;
--moz-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
--webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+
+.flexbox {
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  
 }
-.form-wrapper-2 input::-webkit-input-placeholder {
-color: #999;
-font-weight: normal;
-font-style: italic;
+
+.search {
+  margin: 20px;
+  background-color: rgb(77, 6, 61, .7);
+  padding: 30px;
+  padding-left: 240px;
+  padding-right: 240px;
+  border-radius: 50%;
+  
 }
-.form-wrapper-2 input:-moz-placeholder {
-color: #999;
-font-weight: normal;
-font-style: italic;
+
+.search > h3 {
+  font-weight: normal;
 }
-.form-wrapper-2 input:-ms-input-placeholder {
-color: #999;
-font-weight: normal;
-font-style: italic;
+
+.search > h1,
+.search > h3 {
+  color: white;
+  margin-bottom: 15px;
+  text-shadow: 0 1px #0091c2;
 }
-.form-wrapper-2 button {
-overflow: visible;
-position: relative;
-float: right;
-border: 0;
-padding: 0;
-cursor: pointer;
-height: 40px;
-width: 110px;
-font: bold 15px/40px 'Raleway', sans-serif;
-color: #fff;
-text-transform: uppercase;
-background: rgb(38, 156, 27);
--moz-border-radius: 0 3px 3px 0;
--webkit-border-radius: 0 3px 3px 0;
-border-radius: 0 3px 3px 0;
-text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+
+.search > div {
+  display: inline-block;
+  position: relative;
 }
-.form-wrapper-2 button:hover{
-background: rgb(47, 250, 7);
+
+.search > div:after {
+  content: "";
+  background: white;
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top: 40px;
+  right: 2px;
+  transform: rotate(135deg);
+  box-shadow: 1px 0 #0091c2;
 }
-.form-wrapper-2 button:active,
-.form-wrapper-2 button:focus{
-background: #c42f2f;
+
+.search > div > input {
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px white;
+  outline: none;
+  border-radius: 35px;
+  box-shadow: 0 1px #0091c2;
+  transition: width 0.5s;
 }
-.form-wrapper-2 button:before {
-content: '';
-position: absolute;
-border-width: 8px 8px 8px 0;
-border-style: solid solid solid none;
-border-color: transparent rgb(38, 156, 27) transparent;
-top: 12px;
-left: -6px;
+
+.search > div > input::placeholder {
+  color: #efefef;
+  opacity: 1;
 }
-.form-wrapper-2 button:hover:before{
-border-right-color: rgb(47, 250, 7);
+
+.search > div > input::-ms-placeholder {
+  color: #efefef;
 }
-.form-wrapper-2 button:focus:before{
-border-right-color: #c42f2f;
+
+.search > div > input::-ms-input-placeholder {
+  color: #efefef;
 }
-.form-wrapper-2 button::-moz-focus-inner {
-border: 0;
-padding: 0;
+
+.search > div > input:focus,
+.search > div > input:valid {
+  width: 220px;
 }
+
+/* end of search box*/
+
+
+
+
+
+
+
+/*begin  modal*/
+
+
+
+
+/*end  modal*/
+
+
 
 

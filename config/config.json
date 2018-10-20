@@ -3,8 +3,8 @@
     "username": "root",
     "password": "root",
     "database": "eventPlanner_db",
+    "port": 3307,
     "host": "localhost",
-    "port": 8889,
     "dialect": "mysql"
   },
   "test": {

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Events = sequelize.define("Events", {
-    // Giving the Author model a name of type STRING
+   
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -23,10 +23,10 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     time: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.TIME,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [5]
       }
     }
   });

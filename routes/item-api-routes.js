@@ -4,7 +4,7 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the posts
+  // GET route for getting all of the items
   app.get("/api/items", function(req, res) {
     var query = {};
     if (req.query.event_id) {
