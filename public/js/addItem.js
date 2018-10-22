@@ -1,19 +1,30 @@
 // Adds Items to DB and Displays
 
-$('#add-item').on('click', function() {
+$('#item-input').on('click', function() {
     event.preventDefault();
 
     var newItem = {
-        name: $('#item').val().trim()
+        name: $('#name').val().trim()
     }
 
     console.log(newItem);
 
-    $.post('/api/newItem', newItem)
-        .then(function(data) {
-            console.log(data);
-        })
+    addItem();
 
-    $('#item').val("");
+
+
+    // $.post('/api/newItem', newItem)
+    //     .then(function(data) {
+    //         console.log(data);
+    //     })
+
 
 })
+
+function addItem() {
+    var newListItem = $("#name").val();
+    if (newListItem.length > 0) {
+        $("itemsList").append("<li>" + newListItem + "</li>");
+        $('#name').val("");
+    }
+}
