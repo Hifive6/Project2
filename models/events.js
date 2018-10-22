@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TIME,
       allowNull: false,
       validate: {
-        len: [5]
+        len: [1]
       }
     }
   });

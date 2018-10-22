@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "MS@Dc02830786",
     "database": "eventPlanner_db",
-    "port": 3307,
+    
     "host": "localhost",
     "dialect": "mysql"
   },
