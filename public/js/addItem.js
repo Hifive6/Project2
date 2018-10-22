@@ -1,6 +1,6 @@
 // Adds Items to DB and Displays
 
-$('#item-input').on('click', function() {
+$('#addItem').on('click', function() {
     event.preventDefault();
 
     var newItem = {
@@ -13,10 +13,10 @@ $('#item-input').on('click', function() {
 
 
 
-    // $.post('/api/newItem', newItem)
-    //     .then(function(data) {
-    //         console.log(data);
-    //     })
+    $.post('/api/newItem', newItem)
+        .then(function(data) {
+            console.log(data);
+        })
 
 
 })
@@ -24,7 +24,7 @@ $('#item-input').on('click', function() {
 function addItem() {
     var newListItem = $("#name").val();
     if (newListItem.length > 0) {
-        $("itemsList").append("<li>" + newListItem + "</li>");
+        $("#itemList").append("<li>" + newListItem + "</li>");
         $('#name').val("");
     }
 }
