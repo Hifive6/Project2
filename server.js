@@ -24,12 +24,8 @@ app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/events-api-routes")(app);
-require("./routes/htmlRoutes")(app);
+// require("./routes/htmlRoutes")(app);
 require("./routes/item-api-routes")(app);
-<<<<<<< HEAD
-
-=======
->>>>>>> cea478017d683341146cdc9cced5ca7645259ff2
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
