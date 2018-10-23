@@ -1,0 +1,52 @@
+html,body{
+    height:100%;
+  }
+  body{
+  
+  }
+  body:before{
+    content:'';
+    height:100%;
+ 
+  
+  }
+  .logIn{
+    background:rgb(87, 90, 89);
+    color:#fff;
+    border:none;
+    position:relative;
+    height:50px;
+    width: 120px;
+    font-size: 12px;
+    padding: 12px;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    margin-top: 1.2%;
+    display: flex;
+    justify-content: center;
+  }
+  .logIn:hover{
+    background:#fff;
+    color:rgb(87, 90, 89);
+  }
+  .logIn:before,.logIn:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: rgb(87, 90, 89);
+    transition:400ms ease all;
+  }
+  .logIn:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .logIn:hover:before,.logIn:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
