@@ -5,18 +5,18 @@ $("#search-btn").on("click", function(event) {
     validateId() 
 })
 
-// function validateId() {
-// $.get("api/events/" + idSearch, function(data){
-// //    var time = moment(data.time, "hmm").format("HH:mm");
-//     if(!data){
-//         alert("go home, you are drunk")
-//     }else{    
-//         validatePin()
-//     }
-//     // console.log(data);
+function validateId() {
+$.get("api/events/" + idSearch, function(data){
+//    var time = moment(data.time, "hmm").format("HH:mm");
+    if(!data){
+        alert("go home, you are drunk")
+    }else{    
+        console.log(data);
+        // validatePin()
+    }
     
-// })
-// }
+})
+}
 
 
 

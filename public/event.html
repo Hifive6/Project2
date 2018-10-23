@@ -27,27 +27,73 @@
 
             </ul>
             <div class="page" id="p1">
-              <section class="icon fa fa-group"><span class="title">Event</span>time<span class="hint">yo yo yo yo yo oooooooo
-                  yoooo
-                  </span> </section>
-                
-                
-               
+              <section class=""><span class="title"></span><span class="hint">
+
+                </span>
+
+
+
+                <div class="card">
+                  <header>
+                    <time id="date">Date</time>
+                    <div class="logo">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 234.5 53.7">
+                          <style>
+                            .st0 {
+                              fill: none;
+                              stroke: #FFFFFF;
+                              stroke-width: 5;
+                              stroke-miterlimit: 10;
+                            }
+                          </style>
+                          <path d="M.6 1.4L116.9 52l117-50.6" class="st0" /></svg>
+                      </span class="fa fa-party-hat"></div>
+                    <div id="time">Time</div>
+                  </header>
+                  <div class="announcement">
+                    <h3></h3>
+                    <h1 id="eventName">Event Name</h1>
+                    <h3 id="location">Locaction</h3>
+                  </div>
+                </div>
+
+                <div class="inspiration">
+                  <a rel="noopener" target="_blank" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3794/heartland.jpg">Inspiration</a>
+                </div>
+
+              </section>
+
+
+
             </div>
             <div class="page" id="p2">
               <section class="  "><span class=""></span>
-              
+
                 <form>
               </section>
               <div class="centered">
-                  <div class="group">
-                    <input type="text" id="name" required="required"/>
-                    <label for="name">Add Item</label>
-                    <div class="bar"></div>
-                  </div>
+                <div class="group">
+                  <input type="text" id="name" required="required" />
+                  <label for="name">Add Item</label>
+                  <div class="bar"></div>
+                  <button type="submit" style="display: none;" id="addItem"></button>
+
                 </div>
+
+                <div class="itemsDiv">
+                  <ol id="itemList">
+                    <li>item one</li>
+                    <li>item two</li>
+                    <li>item three</li>
+
+                  </ol>
+                </div>
+               
+
+              </div>
               </form>
- 
+
 
             </div>
           </div>
@@ -58,8 +104,9 @@
   </div>
 
 
+<script src="https://code.jquery.com/jquery.js"></script>
 
-
+<script src="js/addItem.js"></script>
 
 
 
