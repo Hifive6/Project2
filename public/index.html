@@ -12,19 +12,21 @@
   <link rel="stylesheet" href="./styles/additems.css">
 
   <link rel="stylesheet" href="./styles/eventcard.css">
-<!---
+  <!---
   <link rel="stylesheet" href="./styles/eventstyle.css">
 -->
   <link rel="stylesheet" href="./styles/form.css">
-  
+
   <link rel="stylesheet" href="./styles/loginbuttons.css">
 
   <link rel="stylesheet" href="./styles/searchbox.css">
 
   <link rel="stylesheet" href="./styles/style1.css">
-  
+
   <link rel="stylesheet" href="./styles/titlepage.css">
-<!--
+
+  <link rel="stylesheet" href="./styles/modal.css">
+  <!--
 -->
 
 
@@ -44,12 +46,12 @@
               <a href="#t1"><li class="icon fa fa-home" id="one"></li></a>
               <a href="#t2"><li class="icon fa fa-calendar" id="two"></li></a>
               <a href="#t3"><li class="icon fa fa-search" id="three"></li></a>
-              <a style="display:none;" href="#t4"><li class="" id="four"></li></a>
-              <a style="display:none;" href="#t5"><li class="" id="five"></li></a>
+              <a href="#t4"><li class="icon fa fa-search" id="four"></li></a>
+              <a href="#t5"><li class="icon fa fa-search" id="five"></li></a>
             </ul>
             <div class="page" id="p1">
               <section class=""><span class="title"></span><span class="hint"> </span></section>
-           
+
               <button class="logIn">Sign up</button>
               <button class="logIn">Log In</button>
 
@@ -58,30 +60,30 @@
 
             <div class="page" id="p2">
               <section class="icon "><span class="title"></span></section>
-<!-- begin form-->
+              <!-- begin form-->
 
               <form class="form1">
-                  <div class="formHeaderDiv">
-                    <h1 class="icon formHeader"></h1>
-                  </div>
-                  <div class="question">
-                    <input type="text" id="name" required/>
-                    <label>Event Name</label>
-                  </div>
-                  <div class="question">
-                    <input type="text" id="location" required/>
-                    <label>Location</label>
-                  </div>
-                  <div class="question">
-                    <input type="text" id="time" required/>
-                    <label>Time</label>
-                  </div>
-                  <div class="question">
-                    <input type="text" id="pin" required/>
-                    <label>6-Digit Pin</label>
-                  </div>
-                  <button id="addbtn">Submit</button>
-                </form>
+                <div class="formHeaderDiv">
+                  <h1 class="icon formHeader"></h1>
+                </div>
+                <div class="question">
+                  <input type="text" id="name" required/>
+                  <label>Event Name</label>
+                </div>
+                <div class="question">
+                  <input type="text" id="location" required/>
+                  <label>Location</label>
+                </div>
+                <div class="question">
+                  <input type="text" id="time" required/>
+                  <label>Time</label>
+                </div>
+                <div class="question">
+                  <input type="text" id="pin" required/>
+                  <label>6-Digit Pin</label>
+                </div>
+                <button id="addbtn">Submit</button>
+              </form>
 
 
             </div>
@@ -91,102 +93,131 @@
               <section class=""><span class="title"></span></section>
 
 
-              <div class="card">
-                  <header>
-                    <time id="date">Date</time>
-                    <div class="logo">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 234.5 53.7">
-                          <style>
-                            .st0 {
-                              fill: none;
-                              stroke: #FFFFFF;
-                              stroke-width: 5;
-                              stroke-miterlimit: 10;
-                            }
-                          </style>
-                          <path d="M.6 1.4L116.9 52l117-50.6" class="st0" /></svg>
-                      </span class="fa fa-party-hat"></div>
-                    <div id="time">Time</div>
-                  </header>
-                  <div class="announcement">
-                    <h3></h3>
-                    <h1 id="eventName">Event Name</h1>
-                    <h3 id="location">Locaction</h3>
+
+              <!--- search box-->
+              <form style="opacity: 5;">
+                <div class="flexbox">
+                  <div class="search">
+
+                    <h1> Search Event ID</h1>
+
+                    <div>
+
+                      <input type="text" id="search-input" placeholder="        Search . . ." required>
+
+                      <button type="submit" style="display: none;" id=s earch-btn></button>
+
+                    </div>
                   </div>
                 </div>
+              </form>
 
-               
+              <!-- madal-->
+              <div class="container">
+                  <h2>CSS3 Modal</h2>
+                 
+                  <p><a href="#modal" class="btn go">Activate Modal</a></p>
+                </div>
 
 
-            </div>
+               </div>
 
 
-            <div  class="page" id="p4">
-              <section class=""><span class="title"></span></section>
-
-              <form>
-             
-                  <div class="centered">
-                    <div class="group">
-                      <input class="input1" type="text" id="name" required="required" />
-                      <label class="label" for="name">Add Item</label>
-                      <div class="bar"></div>
-    
+                <div id="modal">
+                  <div class="modal-content">
+                    <div class="header">
+                      <h2>Modal Heading</h2>
                     </div>
-    
-                    <div id="itemList" class="itemsDiv">
-                      <ol>
-                        <li>item one</li>
-                        <li>item two</li>
-                        <li>item three</li>
-    
-                      </ol>
+                    <div class="copy">
+                      <p>Lorem ipsum dolor </p>
                     </div>
-                   
-    
+                    <div class="cf footer">
+                      <a href="#" class="btn">Close</a>
+                    </div>
                   </div>
-                  </form>
-    
+                  <div class="overlay"></div>
+                </div>
 
+
+           
+
+
+            <div class="page" id="p4">
+              <section class=""><span class="title"></span></section>
+
+              <div class="card">
+                <header>
+                  <time id="date">Date</time>
+                  <div class="logo">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 234.5 53.7">
+                        <style>
+                          .st0 {
+                            fill: none;
+                            stroke: #FFFFFF;
+                            stroke-width: 5;
+                            stroke-miterlimit: 10;
+                          }
+                        </style>
+                        <path d="M.6 1.4L116.9 52l117-50.6" class="st0" /></svg>
+                    </span class="fa fa-party-hat"></div>
+                  <div id="time">Time</div>
+                </header>
+                <div class="announcement">
+                  <h3></h3>
+                  <h1 id="eventName">Event Name</h1>
+                  <h3 id="location">Locaction</h3>
+                </div>
+              </div>
 
             </div>
 
+          
 
-            <div class="page" id="p5">
-              <section class=""><span class="title"></span></section>
 
-<!--- search box-->
-<form style="opacity: 5;">
-                  <div class="flexbox">
-                    <div class="search">
-  
-                      <h1> Search Event ID</h1>
-                     
-                      <div>
-  
-                        <input type="text" id="search-input" placeholder="        Search . . ." required>
-  
-                        <button type="submit" style="display: none;" id=s earch-btn></button>
-  
-                      </div>
-                    </div>
+          <div class="page" id="p5">
+            <section class=""><span class="title"></span></section>
+
+
+            <form>
+
+              <div class="centered">
+                <div class="group">
+                  <input class="input1" type="text" id="name" required="required" />
+                  <label class="label" >Add</label>
+                  <div class="bar"></div>
+
+                </div>
+
+                <div id="itemList" class="itemsDiv">
+                  <ol>
+                    <li>item one</li>
+                    <li>item two</li>
+                    <li>item three</li>
+
+                  </ol>
+                </div>
                 </form>
 
+          </div>    
+            
+
 
 
             </div>
 
 
-
-
-            
-
           </div>
+
+
         </div>
+
+
+
       </div>
     </div>
   </div>
+  
 
 
 
