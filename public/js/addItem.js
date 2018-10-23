@@ -2,20 +2,12 @@
 
 $('#addItem').on('click', function() {
     event.preventDefault();
-
+    // Append new item to screen for user to see
     var newItem = {
         name: $('#name').val().trim()
     }
-
-//     $.post('/api/items', newItem)
-//         .then(function(data) {
-//             console.log(data);
-//         })
-
     addItem();
-
-
-
+    // Post new item to database
     $.post("/api/items", newItem)
         .then(function(data) {
             console.log(data);
@@ -24,6 +16,7 @@ $('#addItem').on('click', function() {
 
 })
 
+// Creates a new item and displays on screen
 function addItem() {
     var newListItem = $("#name").val();
     if (newListItem.length > 0) {
