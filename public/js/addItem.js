@@ -13,7 +13,7 @@ $('#addItem').on('click', function() {
 
 
 
-    $.post('/api/newItem', newItem)
+    $.post('/api/items', newItem)
         .then(function(data) {
             console.log(data);
         })

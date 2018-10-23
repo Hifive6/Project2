@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/events-api-routes")(app);
 require("./routes/htmlRoutes")(app);
-
+require("./routes/item-api-routes")(app);
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
