@@ -15,8 +15,12 @@ module.exports = function(app) {
     // In this case, just db.Author
     db.Items.findAll({
       where: query,
-      include: [db.Events]
+      include: [{
+        model: db.Events,
+      required:true
+    }]
     }).then(function(dbItems) {
+      console.log (dbItems)
       res.json(dbItems);
     });
   });
