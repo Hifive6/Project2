@@ -1,9 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "MS@Dc02830786",
+    "password": "root",
     "database": "eventPlanner_db",
     "host": "localhost",
+    "port": 3307,
     "dialect": "mysql"
   },
   "test": {
@@ -16,7 +17,7 @@
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "port": 8889,
+    "port": 3307,
     "dialect": "mysql"
   }
 }

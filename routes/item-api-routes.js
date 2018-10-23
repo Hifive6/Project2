@@ -12,6 +12,7 @@ module.exports = function(app) {
     });
   });
 
+
   // GET route for getting all of the items
   // app.get("/api/items", function(req, res) {
   //   // var query = {};
@@ -42,10 +43,10 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [{
-        model: db.Events,
-        required: true
-      }]
+      // include: [{
+      //   model: db.Events,
+      //   required: true
+      // }]
       // [db.Events]
     }).then(function(dbItems) {
       res.json(dbItems);
