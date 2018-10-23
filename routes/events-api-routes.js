@@ -17,7 +17,10 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(dbEvents) {
+      console.log(dbEvents)
+      res.render("event")
       res.json(dbEvents);
+      
     });
   });
 
