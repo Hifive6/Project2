@@ -1,19 +1,26 @@
 // Adds Items to DB and Displays
 
-$('#add-item').on('click', function() {
+$('#addItem').on('click', function() {
     event.preventDefault();
-
+    // Append new item to screen for user to see
     var newItem = {
-        name: $('#item').val().trim()
+        name: $('#name').val().trim()
     }
-
-    console.log(newItem);
-
-    $.post('/api/newItem', newItem)
+    addItem();
+    // Post new item to database
+    $.post("/api/items", newItem)
         .then(function(data) {
             console.log(data);
         })
 
-    $('#item').val("");
 
 })
+
+// Creates a new item and displays on screen
+function addItem() {
+    var newListItem = $("#name").val();
+    if (newListItem.length > 0) {
+        $("#itemList").append("<li>" + newListItem + "</li>");
+        $('#name').val("");
+    }
+}

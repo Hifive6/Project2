@@ -1,10 +1,11 @@
 var db = require("../models");
 
 module.exports = function(app) {
-    // Grab All Events
+
+  // Display ALL events with items
   app.get("/api/events", function(req, res) {
     db.Events.findAll({
-    //   include: [db.Post]
+      include: [db.Items]
     }).then(function(dbEvents) {
       res.json(dbEvents);
     });
@@ -17,17 +18,21 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(dbEvents) {
+      console.log(dbEvents)
+      res.render("event")
       res.json(dbEvents);
+      
     });
   });
 
+  // Find specific event with corresponding pin
   app.get("/api/events/:id/:pin", function(req, res) {
     db.Events.findOne({
       where: {
        id: req.params.id,
         pin: req.params.pin
       },
-      // include: [db.Post]
+      include: [db.Items]
     }).then(function(dbEvents) {
       res.json(dbEvents);
     });
