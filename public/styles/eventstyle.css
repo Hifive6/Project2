@@ -324,11 +324,7 @@ h3 {
 
 
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 html, body {
   height: 100%;
@@ -404,7 +400,7 @@ img {
     transition: .25s ease;
   }
   
-  input {
+  .input {
     display: block;
     width: 100%;
     padding-top: 36.66667px;
@@ -415,23 +411,23 @@ img {
     font-size: 36.66667px;
     transition: .3s ease;
   }
-  input:valid ~ label {
+  .input:valid ~ label {
     top: 0;
     font: 700 22px Roboto;
     color: rgba(255, 255, 255, 0.5);
   }
-  input:focus {
+  .input:focus {
     outline: none;
   }
-  input:focus ~ label {
+  .input:focus ~ label {
     top: 0;
     font: 700 22px Roboto;
     color: #2196f3;
   }
-  input:focus ~ .bar:before {
+  .input:focus ~ .bar:before {
     transform: translateX(0);
   }
-  input:-webkit-autofill {
+  .input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #333 inset;
     -webkit-text-fill-color: white !important;
   }
