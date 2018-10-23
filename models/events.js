@@ -31,10 +31,10 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
+  // Associate each Event with Items
   Events.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
     Events.hasMany(models.Items, {
+      // When removing Events, also remove it's items
       // onDelete: "cascade"
     });
   };
