@@ -7,15 +7,7 @@ module.exports = function(app) {
   // GETs all items listed in ITEMS table and includes corresponding events
   app.get("/api/items", function(req, res) {
     db.Items.findAll({
-<<<<<<< HEAD
-      where: query,
-      include: [{
-        model: db.Events,
-      required:true
-    }]
-=======
       include: [db.Events]
->>>>>>> 457138437640a419b477435db98e64b98c9ffd05
     }).then(function(dbItems) {
       console.log (dbItems)
       res.json(dbItems);
