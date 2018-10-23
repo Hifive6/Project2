@@ -7,7 +7,10 @@ $('#addItem').on('click', function() {
         name: $('#name').val().trim()
     }
 
-    console.log(newItem);
+//     $.post('/api/items', newItem)
+//         .then(function(data) {
+//             console.log(data);
+//         })
 
     addItem();
 

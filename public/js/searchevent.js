@@ -3,15 +3,29 @@ $("#search-btn").on("click", function(event) {
     idSearch = $("#search-input").val().trim();
     console.log(idSearch);
     validateId() 
+    addInfo()
 })
 
 function validateId() {
 $.get("api/events/" + idSearch, function(data){
 //    var time = moment(data.time, "hmm").format("HH:mm");
     if(!data){
-        alert("go home, you are drunk")
+        // $(".modal").removeClass("modal-close")
+        // $(".modal").addClass("modal-open")
+        
     }else{    
+        
         console.log(data);
+        let event = data;
+        
+        // location = data.location;
+        
+        console.log(event)
+        //display_date = data.date
+        
+        $("#eventName").append(event.name);
+        $("#time").append(event.time);
+        $("#location").append(event.location);
         // validatePin()
     }
     
@@ -20,19 +34,13 @@ $.get("api/events/" + idSearch, function(data){
 
 
 
-// function addInfo(data){
-//     var display = '<h1>Name: ' + data.name + '</h1>';
-//    $("#p3").append(display);
-// }
-///on .on("listener", "keyup"
-//if listern which 10, 14 submit form
-// $("#btn").on("click", function(event) {
-//     event.preventDefault();
-//     pinSearch = $("#pin-input").val().trim();
-//     console.log(pinSearch);
-//     validatePin() 
-// })
+function addInfo(){
+    window.open('event.html','_self');
+    //$.get("api/events/" + idSearch, function(data){
 
+
+    //})
+}
 // function validatePin() {
 // $.get("api/events/" + idSearch + "/" + pinSearch, function(data){
 //     if(!data){
