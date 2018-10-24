@@ -15,6 +15,13 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+    date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
     pin: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -34,7 +41,6 @@ module.exports = function(sequelize, DataTypes) {
   // Associate each Event with Items
   Events.associate = function(models) {
     Events.hasMany(models.Items, {
-      // When removing Events, also remove it's items
       onDelete: "cascade"
     });
   };

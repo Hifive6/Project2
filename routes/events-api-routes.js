@@ -19,7 +19,6 @@ module.exports = function(app) {
       }
     }).then(function(dbEvents) {
       console.log(dbEvents)
-      res.render("event")
       res.json(dbEvents);
       
     });
