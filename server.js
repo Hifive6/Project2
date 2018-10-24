@@ -8,6 +8,8 @@ var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+var connection = require("./config/connection.js")
+
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
