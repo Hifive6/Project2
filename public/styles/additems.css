@@ -112,3 +112,27 @@
     box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
    
 }
+
+.add-item {
+  margin-top: 35px;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0);
+  line-height: 0;
+  font-size: 17px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  border-radius: 60px;
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.add-item:hover {
+  transform: scaleY(1.5);
+  color: white;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}

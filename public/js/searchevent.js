@@ -3,124 +3,65 @@ var pinSearch;
 
 $("#search").on("click", function(event) {
     event.preventDefault();
-    //console.log("here")
     idSearch = $("#search-input").val().trim();
-    //console.log(idSearch);
-    validateId() 
-    
-    // addInfo()
+    validateId()
+    $("#search-input").val(''); 
 });
 
-// $("#pin-btn").on("click", function(event) {
-//     event.preventDefault();
-//     pinSearch = $("#pin-input").val().trim();
-//     console.log(pinSearch);
-//     validatePin();
-// });
+$("#pin-btn").on("click", function(event) {
+    event.preventDefault();
+    pinSearch = $("#pin-input").val().trim();
+    console.log(pinSearch);
+    validatePin();
+});
 
-// function showModal() {
-//     $("#modal").on("keypress", function(event){
-//         var keycode = (event.keyCode ? event.keyCode : event.which);
-//         if(keycode == "13"){
-//             $()
-//         }
-//     })
-//     $("#modal").addClass("modal-show")
-
-// }
+function showModal() {
+    $("#modal").on("keypress", function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == "13"){
+            $()
+        }
+    })
+    $("#modal").addClass("modal-show")
+}
 
 function validateId() {
-    $.get("api/events/" + idSearch, function(data){
-        const event = data;
-        const name = event.name
-        const location = event.location
-        const time = event.time
+    $.get("/api/events/" + idSearch, function(data) {
+        
+        if(!data){
+            $("#error-message").show()
+        }
 
-        console.log(event)
-        console.log(name)
-        console.log(location)
-        console.log(time)
-
-        // const info = {
-            // name: 
-            $("#eventName").append(name);
-            // location: 
-            $("#eventLocation").append(location);
-            // time: 
-            $("#eventTime").append(time);
-
-        // }
-        
-        // console.log(info);
-        
-        
-        // console.log(eventid)
-
-        
-        
-        
-        
-        // if (!data === false){
-        //     console.log("false")
-           
-            
-        // }
-        // else{
-            
-        //     console.log("true")
-        // }
+        else {
+            $("#error-message").hide();
+            $("#pin-box").show();
+        }
+        console.log(data);
     })
 }
-        
-//         if(!data){
-//             
-//             $("#modal").addId("modal-open")
-            
-            
-//         } else{
-//             $("#search-input").val('');    
-//             let event = data;
-//             console.log(event)
-            
-//             $("#eventName").append(event.name);
-//             $("#time").append(event.time);
-//             $("#location").append(event.location);
-//             // validatePin()
-//         }
-//     })
-// }
 
+function validatePin() {
+    $.get("api/events/" + idSearch + "/" + pinSearch, function(data){
+        if(!data){
+            $("#error-message2").show()
+            $("#pin-input").val('');
+        } else {
+            window.location.href = "#t4"
+            $("#error-message2").hide()
+            $("#pin-box").hide();
+            $("#pin-input").val('');
+            displayEvent(data);
+        }
+    })
+}
 
+function displayEvent(data) {
+    console.log(data);
+    $("#eventDate").html(data.date);
+    $("#eventTime").html(data.time);
+    $("#eventName").html(data.name);
+    $("#eventLocation").html(data.location);
+    $("#eventItems").html("<h3>Items with corresponding events are currently unavailable</h3>");
+    $("#eventItems").attr("style", "text-align: center");
+}
 
-
-
-// function validatePin() {
-//     $.get("api/events/" + idSearch + "/" + pinSearch, function(data){
-//         if(!data){
-//             // change this
-//             alert("not valid pin")
-//         }else{
-//             display = `${data["name"]}`
-//             display += "<ul>";
-        
-//             display += "<li>" + "Name: "+ data.name + "<br>";
-//             display += "Location: "+ data.location + "<br>";
-//             display += "Time: "+ data.time + "</li>";
-//         // `
-//         // Name:         ${data["name"]}
-//         // Location:     ${data["location"]}
-//         // Time:         ${data["time"]}
-//         // `
-        
-        
-//             display += "</ul>";
-        
-//             $("#stuff").prepend(display);
-//         }
-//         console.log(data);
-//     })
-// }
-
-// function sendToBrowser() {
-
-// }
