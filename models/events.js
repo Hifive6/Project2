@@ -35,7 +35,7 @@ module.exports = function(sequelize, DataTypes) {
   Events.associate = function(models) {
     Events.hasMany(models.Items, {
       // When removing Events, also remove it's items
-      // onDelete: "cascade"
+      onDelete: "cascade"
     });
   };
 
