@@ -29,11 +29,11 @@ left: 0;
 left: 200%;
 }
 
-#p1 { background: darkslateblue; }
-#p2 { background: tomato; }
-#p3 { background: gold; }
-#p4 { background: deeppink; }
-#p5 { background: rebeccapurple; }
+#p1 { background: #e7e5e4}
+#p2 { background: #e7e5e4 }
+#p3 { background: white}
+#p4 { background: #e7e5e4  }
+#p5 { background: #333; }
 
 #t2:target #p2,
 #t3:target #p3,
@@ -61,7 +61,7 @@ background: black;
 }
 
 .icon {
-color: #fff;
+color: rgb(75, 75, 75); 
 font-size: 32px;
 display: block;
 }

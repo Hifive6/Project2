@@ -34,8 +34,11 @@
     min-width: 500px;
     box-sizing: border-box;
     padding: 30px 25px;
-    background-color: rgb(233, 225, 225, .1);
-    border-radius: 40px;
+    background: -gradient(rgb(231, 231, 231), rgb(109, 109, 109), rgb(231, 231, 231));    
+    -webkit-box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
+    box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
+ 
     margin: 150px 0;
     left: 50%;
     -moz-transform: translate(-50%, 0);
@@ -45,7 +48,7 @@
    
   }
   .form1 h1 {
-    color: rgb(0, 0, 0);
+    color: rgb(201, 201, 201);
     font-weight: 100;
     letter-spacing: 0.01em;
     margin-left: 15px;

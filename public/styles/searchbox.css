@@ -16,11 +16,12 @@
 
 .search {
   margin: 20px;
-  background-color: rgb(77, 6, 61, .7);
+  background-color: #e7e5e4;
   padding: 30px;
   padding-left: 240px;
   padding-right: 240px;
-  border-radius: 50%;
+  margin-right: 200px;
+
   margin-top: 200px;
   
 }
@@ -31,7 +32,7 @@
 
 .search > h1,
 .search > h3 {
-  color: white;
+  color: #333;
   margin-bottom: 15px;
   text-shadow: 0 1px #0091c2;
 }
@@ -43,7 +44,7 @@
 
 .search > div:after {
   content: "";
-  background: white;
+  background: #333;
   width: 4px;
   height: 20px;
   position: absolute;
@@ -54,13 +55,13 @@
 }
 
 .search > div > input {
-  color: white;
+  color: #333;
   font-size: 16px;
   background: transparent;
   width: 25px;
   height: 25px;
   padding: 10px;
-  border: solid 3px white;
+  border: solid 3px #333;
   outline: none;
   border-radius: 35px;
   box-shadow: 0 1px #0091c2;
@@ -68,19 +69,64 @@
 }
 
 .search > div > input::placeholder {
-  color: #efefef;
+  color: #333;
   opacity: 1;
 }
 
 .search > div > input::-ms-placeholder {
-  color: #efefef;
+  color: #333;
 }
 
 .search > div > input::-ms-input-placeholder {
-  color: #efefef;
+  color: #333;
 }
 
 .search > div > input:focus,
 .search > div > input:valid {
   width: 220px;
 }
+
+
+
+
+/* shading effect*/
+
+
+/*
+ Effect 2
+ */
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
