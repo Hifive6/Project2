@@ -1,17 +1,16 @@
-var mysql = require("mysql")
+var Sequelize = require("sequelize")
 var connection;
 
 
 if(process.env.JAWSDB_URL){
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
+    connection = new Sequelize (process.env.JAWSDB_URL);
 }else{
-    connnection = mysql.createConnection({
+    connnection = new Sequelize ("eventPlanner_db", "root", "MS@Dc02830786",{
         host: "localhost",
-        user: "root",
-        password: "MS@Dc02830786",
-        database: "eventPlanner_db"
-    });
+        dialect: "mysql",
+        port: "3306"
+    })
 };
 
-connection.connect();
+
 module.exports = connection;
