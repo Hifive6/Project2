@@ -7,9 +7,10 @@
     position: absolute;
     top: 0;
     bottom: 400px;
-    left: 0px;
-    right: 650px;
+    left: 500px;
+    right: 250px;
     margin-left: 60px;
+    
   }
   
   .group {
@@ -89,11 +90,25 @@
 
 .itemsDiv {
     margin-left: 100px;
-   
+    
     margin-right: 50px;
     padding: 100px;
+   
     display: inline;
+     padding-bottom: 200px;
     
     font: 22px Roboto; 
 }   
 /*end items div */
+
+
+
+/* div */
+.box {
+   
+    background-color: #333;
+    -webkit-box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
+    box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
+   
+}
