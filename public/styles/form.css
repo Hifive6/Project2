@@ -34,7 +34,7 @@
     min-width: 500px;
     box-sizing: border-box;
     padding: 30px 25px;
-    background: -gradient(rgb(231, 231, 231), rgb(109, 109, 109), rgb(231, 231, 231));    
+    background: linear-gradient(rgb(231, 231, 231), rgb(179, 178, 178), rgb(231, 231, 231));    
     -webkit-box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
     box-shadow: 18px 17px 42px -5px rgba(0,0,0,0.75);
