@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Asap+Condensed:600i,700');
 
-body {
-  
-  display: flex;
-  text-transform: uppercase;
-  font-family: 'Asap Condensed', sans-serif;
-}
 
 h1 {
   font-size: 60px;
@@ -20,13 +14,14 @@ h3 {
 
 .card {
   position: relative;
-  margin-top: 50px;
-  margin-left: 30%;
+
+  height: 550px;
+  width: 550px;
+  margin-top: 2%;
   margin-right: 30%;
-  height: 650px;
-  width: 690px;
+  margin-left: 25%;
   text-align: center;
-  background: linear-gradient(rgb(12, 9, 92), rgb(40, 17, 56), #2B0830);
+  background: linear-gradient(rgb(194, 194, 194), rgb(87, 87, 87), rgb(70, 70, 70));
   border-radius: 2px;
   box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);
   color: #fff;
@@ -49,7 +44,7 @@ h3 {
   text-align: left;
 }
 .card header > *:last-child {
-  text-align: right;
+  text-align: left;
 }
 
 .logo {
@@ -66,25 +61,19 @@ h3 {
 }
 
 .logo:before {
-  right: 158px;
-  width: 40%;
+  right: 228px;
+  width: 50%;
 }
 .logo:after {
-  left: 158px;
+  left: 78px;
   width: 55%;
 }
 
 .logo span {
-  /*border: solid currentColor;
-  border-width: 0 3px 3px 0;
-  position: absolute;
-  top: -22px;
-  width: 69px;
-  height: 70px;
-  left: 50%;
-  transform: translateX(-58%) rotate(58deg) skew(0deg, -30deg);*/
+ 
   display: block;
   position: absolute;
+  right: 70px;
   width: 100%;
   top: calc(50% - 1px);
 }

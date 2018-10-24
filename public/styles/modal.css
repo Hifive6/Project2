@@ -1,0 +1,127 @@
+#modal {
+	left:50%;
+	margin:-250px 0 0 -40%;
+	opacity: 0;
+	position:absolute;
+	top:-50%;
+	visibility: hidden;
+	width:80%;
+	box-shadow:0 3px 7px rgba(0,0,0,.25);
+	box-sizing:border-box;
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+}
+	/* Make the modal appear when targeted */
+	#modal:target {
+		opacity: 1;
+		top:50%;
+		visibility: visible;
+	}
+#modal .header,#modal .footer {
+	border-bottom: 1px solid #000000;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    
+}
+	#modal .footer {
+		border:none;
+		border-top: 1px solid #000000;
+		border-radius: 0 0 5px 5px;
+	}
+#modal h2 {
+	margin:0;
+}
+#modal .btn {
+	float:right;
+}
+#modal .copy,#modal .header, #modal .footer {
+	padding:25px;
+}
+.modal-content {
+	background: #868686;
+	position: relative;
+	z-index: 20;
+	border-radius:5px;
+}
+#modal .copy {
+	background: rgb(133, 133, 133);
+}
+
+#modal .overlay {
+	background-color: #000;
+	background: rgba(0,0,0,.5);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+/*password box*/
+
+
+:root {
+    background: #f5f6fa;
+    color: #9c9c9c;
+    font: 1rem "PT Sans", sans-serif;
+  }
+  html, body, .container {
+    height: 100%;
+  }
+  a {
+    color: inherit;
+  }
+  a:hover {
+    color: #7f8ff4;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .btn {
+    display: inline-block;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    padding-right:20px;
+
+    transition: all 200ms ease-in;
+    cursor: pointer;
+  }
+  .btn--primary {
+    background: #7f8ff4;
+    color: #fff;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    padding: 12px 36px;
+  }
+  .btn--primary:hover {
+    background: #6c7ff2;
+  }
+  .btn--primary:active {
+    background: #7f8ff4;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+  }
+  .btn--inside {
+    margin-left: -96px;
+  }
+  .form__field {
+    width: 360px;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+  }
+  
