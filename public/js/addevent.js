@@ -1,17 +1,17 @@
+// Global variables are declared here for reference later
+var newEvent;
+var newItem;
+var itemList = [];
 
 $("#addbtn").on("click", function(event) {
 event.preventDefault();
 
-    // make a newCharacter obj
-    var newEvent = {
-        // name from name input
+    // Create new event object to send to db
+    newEvent = {
         name: $("#name").val().trim(),
-        // role from role input
         location: $("#location").val().trim(),
-        // age from age input
+        date: $("#date").val().trim(),
         time: $("#time").val().trim(),
-        //time: moment($("#time").val().trim(), "hmm").format("HH:mm"),
-        // points from force-points input
         pin: $("#pin").val().trim()
     };
 
@@ -35,3 +35,56 @@ console.log(newEvent);
     window.location.href = "/#t5";
 
 });
+
+// Adds Items to DB and Displays
+
+var eventSelect = $('#name');
+
+$('#addItem').on('click', function() {
+    event.preventDefault();
+
+    // Need to get Event ID where event name is created
+    // $.get("/api/events/" + )
+    // Append new item to screen for user to see
+    var newItem = {
+        name: $('#newItem').val().trim(),
+        EventId: newEvent.name
+    }
+    console.log(newItem);
+    addItem();
+    // Post new item to database
+    $.post("/api/items", newItem).then(function(data) {
+        console.log(data);
+    })
+})
+
+// Creates a new item and displays on screen
+function addItem() {
+    var newListItem = $("#newItem").val();
+    if (newListItem.length > 0) {
+        itemList.push(newListItem);
+        $("#itemList").append("<li>" + newListItem + "</li>");
+        $('#newItem').val("");
+    }
+}
+
+// Finished button for adding items takes user to Event Summary Page
+// Displays the summary for the newly created event with the items
+$("#final").on('click', function() {
+    $("#eventItems").empty();
+    window.location.href = "/#t4";
+    $("#itemList").empty();
+    $("#eventDate").html(newEvent.date);
+    $("#eventTime").html(newEvent.time);
+    $("#eventName").html(newEvent.name);
+    $("#eventLocation").html(newEvent.location);
+    itemList.forEach(element => {
+        $("#eventItems").append("<li>" + element + "</li>");
+    })
+    emptyItemArray();
+})
+
+// function to empty itemList array
+function emptyItemArray() {
+    itemList.length = 0;
+}

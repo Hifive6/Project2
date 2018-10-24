@@ -15,7 +15,6 @@ module.exports = function(sequelize, DataTypes) {
     Items.belongsTo(models.Events, {
       foreignKey: {
         allowNull: false,
-        type: DataTypes.STRING
       }
     });
   };

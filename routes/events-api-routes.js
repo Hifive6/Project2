@@ -38,6 +38,7 @@ module.exports = function(app) {
     });
   });
 
+
   // Create a new event
   app.post("/api/newEvent", function(req, res) {
     console.log(req.body);
