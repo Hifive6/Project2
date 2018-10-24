@@ -111,7 +111,7 @@
 
                       <input type="text" id="search-input" placeholder="        Search . . ." required>
 
-                      <button type="submit" style="display: none;" id=s earch-btn></button>
+                      <button type="submit" style="display: none;" id="search" earch-btn></button>
 
                     </div>
                   </div>
@@ -122,7 +122,9 @@
               <div class="container" style="color:black">
                   <h2></h2>
                  
-                  <p><a href="#modal" style="color:black" class="btn go">press</a></p>
+                  <p><a href="#modal" class="btn go" id = "modalbtn">press</a></p>
+                  <button type="submit" id="modal">here</button>
+
                 </div>
 
 
@@ -154,6 +156,7 @@
                       
 
 
+
                     </div>
                     <div class="cf footer">
                       <a href="#" class="btn">Close</a>
@@ -171,7 +174,7 @@
 
             <div class="card">
                 <header>
-                  <time id="date">Date</time>
+                  <time id="eventdate"></time>
                   <div class="logo">
                     <span>
                       <svg id="Layer_1" viewBox="0 0 234.5 53.7">
@@ -185,12 +188,12 @@
                         </style>
                         <path d="M.6 1.4L116.9 52l117-50.6" class="st0" /></svg>
                     </span class="fa fa-party-hat"></div>
-                  <div id="time">Time</div>
+                  <div id="eventTime"></div>
                 </header>
                 <div class="announcement">
                   <h3></h3>
-                  <h1 id="eventName">Event Name</h1>
-                  <h3 id="location">Locaction</h3>
+                  <h1 id="eventName"></h1>
+                  <h3 id="eventLocation"></h3>
                 </div>
               </div>
 
@@ -255,5 +258,8 @@
 
 
 </body>
+<script src="https://code.jquery.com/jquery.js"></script>
+      <script src="./js/addevent.js" type="text/javascript"></script>
+      <script src="./js/searchevent.js" type="text/javascript"></script>
 
 </html>
