@@ -5,10 +5,6 @@
     "port": 3307,
     "database": "eventPlanner_db",
     "host": "localhost",
-<<<<<<< HEAD
-    "port": 8889,
-=======
->>>>>>> 08bec86180a1287f455c896ae36ea0e2b1fae433
     "dialect": "mysql"
   },
   "test": {

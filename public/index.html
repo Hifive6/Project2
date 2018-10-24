@@ -54,9 +54,11 @@
               <button class="logIn">Sign up</button>
             </a>
             <a href="auth/login.html" >
-              <button class="logIn">Log In</button>
-            </a>     
+              <button class="logIn">Log In</button></a>
+              <div class="title elegantshadow" ><h4>Welcome to the Main Event</h4></div>
+                 
             </div>
+
 
 
             <div class="page" id="p2">
@@ -110,12 +112,33 @@
 
                       <input type="text" id="search-input" placeholder="        Search . . ." required>
 
-                      <button type="submit" style="display: none;" id="search" earch-btn></button>
+                      <button type="submit" style="display: none;" id="search"></button>
 
                     </div>
+                    <p style="color: red; display: none" id="error-message">Please enter a valid event ID</p>
                   </div>
                 </div>
               </form>
+
+
+              <form style="opacity: 5; display:none" id="pin-box">
+                <div class="flexbox">
+                  <div class="search   effect2">
+
+                    <h1> Enter Pin</h1>
+
+                    <div>
+
+                      <input type="text" id="pin-input" placeholder="        Search . . ." required>
+
+                      <button type="submit" style="display: none;" id="pin-btn"></button>
+
+                    </div>
+                    <p style="color: red; display: none" id="error-message2">Please enter a valid pin</p>
+                  </div>
+                </div>
+              </form>
+
 
               <!-- madal-->
               <div class="container" style="color:black">

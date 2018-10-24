@@ -19,7 +19,6 @@ module.exports = function(app) {
       }
     }).then(function(dbEvents) {
       console.log(dbEvents)
-      res.render("event")
       res.json(dbEvents);
       
     });
@@ -37,8 +36,6 @@ module.exports = function(app) {
       res.json(dbEvents);
     });
   });
-
-  <div class="title elegantshadow" ><h4>Welcome to the Main Event</h4></div>
 
   // Create a new event
   app.post("/api/newEvent", function(req, res) {

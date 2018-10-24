@@ -48,7 +48,7 @@ $('#addItem').on('click', function() {
     // Append new item to screen for user to see
     var newItem = {
         name: $('#newItem').val().trim(),
-        EventId: newEvent.name
+        // EventId: newEvent.name
     }
     console.log(newItem);
     addItem();
