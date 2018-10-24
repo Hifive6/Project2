@@ -104,7 +104,7 @@
 
                       <input type="text" id="search-input" placeholder="        Search . . ." required>
 
-                      <button type="submit" style="display: none;" id=s earch-btn></button>
+                      <button type="submit" style="display: none;" id="search-btn"></button>
 
                     </div>
                   </div>
@@ -184,23 +184,27 @@
 
           <div class="page" id="p5">
             <section class=""><span class="title"></span></section>
+            <div>
+              <input type="text" id="event-name">
+            </div>
 
 
             <form>
 
               <div class="centered">
                 <div class="group">
-                  <input class="input1" type="text" id="name" required="required" />
-                  <label class="label" >Add</label>
+                  <input class="input1" type="text" id="newItem" required="required" />
+                  <label class="label">Add</label>
                   <div class="bar"></div>
+                  <button style="display: none" id="addItem"></button>
 
                 </div>
 
                 <div id="itemList" class="itemsDiv">
                   <ol>
-                    <li>item one</li>
+                    <!-- <li>item one</li>
                     <li>item two</li>
-                    <li>item three</li>
+                    <li>item three</li> -->
 
                   </ol>
                 </div>
@@ -229,6 +233,9 @@
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/addevent.js"></script>
+<script src="js/searchevent.js"></script>
+<script src="js/addItem.js"></script>
+
 
 
 </body>

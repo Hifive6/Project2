@@ -23,6 +23,7 @@ function validateId() {
             // $(".modal").removeClass("modal-close")
             // $(".modal").addClass("modal-open")
             alert("Please enter correct id");
+            return;
             
         } else{
             $("#search-input").val('');    

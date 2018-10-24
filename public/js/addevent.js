@@ -21,9 +21,9 @@ console.log(newEvent);
         // on success, run this callback
         .then(function (data) {
             // log the data we found
-            console.log(data);
+            console.log(data.name);
             // tell the user we're adding a character with an alert window
-            
+            $("#event-name").html(data.name);
         });
 
     // empty each input box by replacing the value with an empty string
@@ -31,5 +31,7 @@ console.log(newEvent);
     $("#location").val("");
     $("#time").val("");
     $("#pin").val("");
+
+    window.location.href = "/#t5";
 
 });

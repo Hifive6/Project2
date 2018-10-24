@@ -1,11 +1,15 @@
 // Adds Items to DB and Displays
 
+var eventSelect = $('#name');
+
 $('#addItem').on('click', function() {
     event.preventDefault();
     // Append new item to screen for user to see
     var newItem = {
-        name: $('#name').val().trim()
+        name: $('#newItem').val().trim(),
+        // EventId: $("#event-name")
     }
+    console.log($("#event-name").val());
     addItem();
     // Post new item to database
     $.post("/api/items", newItem)
@@ -18,9 +22,9 @@ $('#addItem').on('click', function() {
 
 // Creates a new item and displays on screen
 function addItem() {
-    var newListItem = $("#name").val();
+    var newListItem = $("#newItem").val();
     if (newListItem.length > 0) {
         $("#itemList").append("<li>" + newListItem + "</li>");
-        $('#name').val("");
+        $('#newItem').val("");
     }
 }
