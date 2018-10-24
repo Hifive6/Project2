@@ -38,6 +38,7 @@ module.exports = function(app) {
     });
   });
 
+  <div class="title elegantshadow" ><h4>Welcome to the Main Event</h4></div>
 
   // Create a new event
   app.post("/api/newEvent", function(req, res) {
